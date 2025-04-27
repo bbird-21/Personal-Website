@@ -1,0 +1,30 @@
+.particles-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* full first page */
+  background: black;
+  overflow: hidden; /* prevent particles from overflowing */
+  /* The Fade Effect using Masking */
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.some-text {
+font-size: 1000px;
+}
+
+.some-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50vh;
+  color: white;
+  font-size: 100px;
+}
