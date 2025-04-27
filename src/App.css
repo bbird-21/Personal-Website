@@ -1,30 +1,105 @@
-.particles-background {
-  position: relative;
-  width: 100vw;
-  height: 100vh; /* full first page */
-  background: black;
-  overflow: hidden; /* prevent particles from overflowing */
-  /* The Fade Effect using Masking */
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-
-}
 
 .container {
-  height: 100%;
-  width: 100%;
-  background-color: black;
-}
-
-.some-text {
-font-size: 1000px;
-}
-
-.some-text {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  margin-top: 50vh;
+  height: 100vh; /* Ensure container takes full height */
+}
+
+
+.particles-background {
+  /* Make it absolute to take it out of normal flow */
+  position: absolute;
+  width: 100vw;
+  height: 100vh; /* full first page */
+  /* The Fade Effect using Masking */
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(60%);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.title {
+  position: absolute;
+  top: 30%;
+  text-align: center; /* Center text if block */
+
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+}
+
+.title--style {
+  animation: fadeIn 1.5s ease-out 2s forwards;
+  visibility: hidden;
+  font-size: 7rem;
+  font-family: 'Poppins';
+  font-weight: bold;
+  letter-spacing: 0.025em;
+  color: #F5F5DC;
+}
+
+.text {
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-height: 200px;
+	color: greenyellow;
+	font-size: 100px;
+}
+
+.main-content {
+  position: absolute;
+  top: 70%;
+  text-align: center;
+  max-width: 50%;
   color: white;
-  font-size: 100px;
+
+}
+
+@keyframes fadeInLeft {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.main-content--style {
+  visibility: hidden;
+  animation: fadeInLeft 1s ease-in-out 3s forwards;
+  font-size: 30px;
+  font-family: 'Poppins';
+  /* color: white; */
+}
+
+.text-green {
+  color: green !important
+}
+
+.test {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: black; */
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+
 }
