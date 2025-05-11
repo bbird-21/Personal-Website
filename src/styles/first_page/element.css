@@ -1,0 +1,73 @@
+.buttons-wrapper {
+  color: black;
+}
+
+.buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  gap: 1vw;
+  margin-top: 5vw;
+}
+
+.github-button,
+.contact-button
+{
+  width: 10vw;
+  border: 2px solid white;
+  color: white;
+  font-size: 1vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 450;
+  border-radius: 55px;
+	padding: 0.4vw;
+  transition: .2s;
+}
+
+.contact-button {
+  position: relative;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.contact-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.contact-button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+.contact-button:hover {
+  color: black;
+}
+.github-button {
+  color: black;
+  background-color: white;
+}
+
+.github-button:hover {
+  opacity: 0.8;
+}
+
+.github-logo {
+  width: 1vw;
+}
+
+

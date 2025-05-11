@@ -1,105 +1,28 @@
 
 .container {
+  --color-bg1: rgb(0, 0, 0);
+  --color-bg2: rgb(4, 0, 59);
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ensure container takes full height */
-}
-
-
-.particles-background {
-  /* Make it absolute to take it out of normal flow */
-  position: absolute;
-  width: 100vw;
-  height: 100vh; /* full first page */
-  /* The Fade Effect using Masking */
-  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-}
-
-@keyframes fadeIn {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(60%);
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
-.title {
-  position: absolute;
-  top: 30%;
-  text-align: center; /* Center text if block */
-
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-}
-
-.title--style {
-  animation: fadeIn 1.5s ease-out 2s forwards;
-  visibility: hidden;
-  font-size: 7rem;
-  font-family: 'Poppins';
-  font-weight: bold;
-  letter-spacing: 0.025em;
-  color: #F5F5DC;
-}
-
-.text {
-	display: inline-block;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	max-height: 200px;
-	color: greenyellow;
-	font-size: 100px;
-}
-
-.main-content {
-  position: absolute;
-  top: 70%;
-  text-align: center;
-  max-width: 50%;
-  color: white;
-
-}
-
-@keyframes fadeInLeft {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-.main-content--style {
-  visibility: hidden;
-  animation: fadeInLeft 1s ease-in-out 3s forwards;
-  font-size: 30px;
-  font-family: 'Poppins';
-  /* color: white; */
-}
-
-.text-green {
-  color: green !important
-}
-
-.test {
-  width: 100vw;
+  position: relative;
   height: 100vh;
-  /* background-color: black; */
-  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-
+  background: linear-gradient(40deg, var(--color-bg1) 0%, var(--color-bg2) 100%);
 }
+
+.container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  --color-bg2: rgb(4, 0, 59);
+  height: 10%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    black 80%
+  );
+  pointer-events: none;
+}
+

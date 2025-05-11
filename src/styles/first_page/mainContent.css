@@ -1,0 +1,62 @@
+
+.title-container {
+  position: absolute;
+  top: 30%;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 550;
+  color: white;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  overflow: hidden;
+
+}
+
+.main-wrapper {
+  font-size: 2vw;
+  margin-top: 2vh;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+}
+
+.main-description-container {
+  display: flex;
+  margin-top: -50px;
+  justify-content: center;
+    white-space: nowrap;
+
+}
+
+.main-rotating-word-container {
+  overflow: hidden;
+  vertical-align: bottom;
+
+  display: grid;
+
+  > * {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+.main-rotating-word {
+  text-align: left;
+  background: linear-gradient(90deg, #87CEEB, #FFFFFF); /* Sky Blue → White */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.second-container {
+  height: 100vh;
+  background-color: black;
+}

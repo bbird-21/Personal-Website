@@ -1,9 +1,6 @@
 body {
-  --color-bg1: rgb(0, 0, 0);
-  --color-bg2: rgb(4, 0, 59);
   margin: 0;
   padding: 0;
   /* background-color: black; */
-  background: linear-gradient(40deg, var(--color-bg1) 0%, var(--color-bg2) 100%);
 
 }

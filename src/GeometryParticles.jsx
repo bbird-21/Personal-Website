@@ -53,7 +53,7 @@ const GeometryParticles = (props) => {
 	  const growthFactor = 21.0;
 	  // Time scaling factor (values > 1 make it slow down faster, < 1 slower)
 	  const timeScale = 1.0;
-	  const maxScale = 50;
+	  const maxScale = 100;
 	  let   calculatedScale = initialScale + growthFactor * Math.log(timeScale * elapsedTime + 1);
 	  const currentScale = Math.min(calculatedScale, maxScale);
 	  // Apply the scale
