@@ -1,17 +1,3 @@
-.buttons-wrapper {
-  color: black;
-}
-
-.buttons-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  position: absolute;
-  gap: 1vw;
-  margin-top: 5vw;
-}
-
 .github-button,
 .contact-button
 {
@@ -28,7 +14,6 @@
 
 .contact-button {
   position: relative;
-  padding: 1rem 2rem;
   background-color: transparent;
   overflow: hidden;
   cursor: pointer;
@@ -68,6 +53,7 @@
 
 .github-logo {
   width: 1vw;
+  margin-right: 10px;
 }
 
 

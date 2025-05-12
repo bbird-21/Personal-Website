@@ -56,7 +56,13 @@
   -webkit-text-fill-color: transparent;
 }
 
-.second-container {
-  height: 100vh;
-  background-color: black;
+.buttons-wrapper {
+  display: flex;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  gap: 1vw;
+  margin-top: 5vw;
 }

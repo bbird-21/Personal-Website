@@ -1,7 +1,6 @@
 import gsap from "gsap";
 
-export function rotateWords() {
-		const wordContainer = document.querySelector(".word-container");
+export function rotateWordsTimeline() {
 		const words = gsap.utils.toArray(".main-rotating-word");
 		const tl = gsap.timeline({
 			repeat: -1

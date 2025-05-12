@@ -1,8 +1,8 @@
 import { useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
-import vertexShader from './vertexShader.glsl?raw';
-import fragmentShader from './fragmentShader.glsl?raw';
+import vertexShader from '../shaders/vertexShader.glsl?raw';
+import fragmentShader from '../shaders/fragmentShader.glsl?raw';
 
 
 const GeometryParticles = (props) => {

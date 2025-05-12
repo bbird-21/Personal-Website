@@ -2,27 +2,35 @@ import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { TextPlugin } from "gsap/TextPlugin";
 
+import { rotateWordsTimeline } from "./RotateWords";
+
 gsap.registerPlugin(SplitText)
 gsap.registerPlugin(TextPlugin)
 
-export	function intro() {
+function titleTimeline() {
+	let titleTimeline = gsap.timeline();
 	let splitTitle = SplitText.create(".title", { type: "words, lines" });
-	let splitMainName = SplitText.create(".main-name", { type: "lines" });
-	let tl = gsap.timeline();
 
-	tl.from(splitTitle.lines, {
+	titleTimeline.from(splitTitle.lines, {
 		delay: 2.5,
 		duration: 1.8,
 		yPercent: 100,
 		stagger: 0.1,
 		ease: "power4",
 		autoAlpha: 1
-	})
-	.to(".main-name", {
+	});
+
+	return titleTimeline;
+}
+
+function presentationTimeline() {
+	let presentationTimeline = gsap.timeline();
+
+
+	presentationTimeline.to(".main-name", {
 		text: {value: "My name is Mohamed Meguedmini"},
 		duration: 2.5,
-		delay: 1,
-	}, 3)
+	})
 	.to(".main-name", {
 		delay: 1,
 		duration: 1,
@@ -36,5 +44,19 @@ export	function intro() {
 		autoAlpha: 1
 	})
 
-	return tl;
+	presentationTimeline.eventCallback("onComplete", () => {
+			rotateWordsTimeline(); // ✅ runs after intro, but doesn't block
+		});
+	// rotateWordsTimeline();
+
+	return presentationTimeline;
+}
+
+export function introTimeline() {
+	let masterTimeline = gsap.timeline();
+
+	masterTimeline.add(titleTimeline());
+	masterTimeline.add(presentationTimeline());
+
+	return masterTimeline;
 }
