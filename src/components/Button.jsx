@@ -12,7 +12,7 @@ export default function Button({
   return (
     <button
       type="button"
-      className={`btn ${variant} ${btnClassName}`}
+      className={`${variant} ${btnClassName}`}
       onClick={onClick}
     >
       {icon && <img src={icon} alt="" className={` ${iconClassName}`} />}

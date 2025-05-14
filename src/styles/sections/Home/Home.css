@@ -51,12 +51,13 @@
 
 .main-rotating-word {
   text-align: left;
+  visibility: hidden;
   background: linear-gradient(90deg, #87CEEB, #FFFFFF); /* Sky Blue → White */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.buttons-wrapper {
+.my-buttons-wrapper {
   display: flex;
   align-items: center;
   color: black;

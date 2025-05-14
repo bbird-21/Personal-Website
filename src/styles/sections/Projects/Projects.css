@@ -1,0 +1,74 @@
+.big-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200vh;
+}
+
+
+.project-container {
+	/* display: flex; */
+	/* background-color: red; */
+	color:white;
+	flex-direction: row;
+
+}
+
+.project-section {
+	/* background-color: green; */
+	/* margin-top: 100px; */
+}
+
+.project-image {
+	display: flex;
+}
+/* ---------- Testing Purpose -----------
+.big-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200vh;
+}
+
+
+.box {
+	width: 100px;
+	height: 100px;
+}
+
+.a {
+	background-color: green;
+	position: absolute;
+	top: 200px;
+	left: 100px;
+}
+
+.b {
+	background-color: blue;
+	position: absolute;
+	top: 600px;
+	left: 100px;
+}
+
+.c {
+	background-color: red;
+	position: absolute;
+	top: 1500px;
+	left: 100px;
+}
+
+.debug-grid {
+   content: "";
+  position: fixed;
+   top: 0;
+  left: 0;
+   width: 100vw;
+  height: 100vh;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 9999;
+}
+
+-----------------------------------------*/

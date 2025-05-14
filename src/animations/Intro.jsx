@@ -45,9 +45,8 @@ function presentationTimeline() {
 	})
 
 	presentationTimeline.eventCallback("onComplete", () => {
-			rotateWordsTimeline(); // ✅ runs after intro, but doesn't block
+			rotateWordsTimeline();
 		});
-	// rotateWordsTimeline();
 
 	return presentationTimeline;
 }

@@ -1,14 +1,14 @@
 import FixedHeader from './components/FixedHeader';
-import FirstPage from './sections/Home/Home'
-import SecondPage from './sections/Projects/Projects';
+import Projects from './sections/Projects/Projects';
+import Home from './sections/Home/Home'
 
 const App = () => {
 
   return (
     <>
       <FixedHeader />
-      <FirstPage></FirstPage>
-      <SecondPage></SecondPage>
+      <Home></Home>
+      <Projects></Projects>
     </>
   );
 };
