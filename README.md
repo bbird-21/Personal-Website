@@ -21,10 +21,10 @@ A modern animated web experience built with **React**, **Vite**, **GSAP**, and *
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/bbird-21/Personal-Website
+cd Personal-Website
 npm install
 npm run dev
 ```
 
-Made with ❤️ using React, GSAP & Three.js
+Made with ❤️ using React, Tailwind, GSAP & Three.js
