@@ -7,6 +7,7 @@ A modern animated web experience built with **React**, **Vite**, **GSAP**, and *
 ## ✨ Features
 
 - ⚛️ **React + Vite** — lightning-fast development and build times
+- 🎨 Tailwind CSS — utility-first styling for rapid, responsive UI design  
 - 🎞️ **GSAP** — fluid, timeline-based animations for text and banners
 - 🌌 **Three.js + GLSL shaders** — background rendered with particles and custom vertex shader effects
 - 💡 Clean, modular architecture for scalable UI animation projects
