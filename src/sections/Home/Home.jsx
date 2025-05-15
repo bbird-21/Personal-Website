@@ -65,10 +65,10 @@ const Home = () => {
 					/>
 				</div>
 			</div>
-			{/* <div className='arrow-container'>
+			<div className='arrow-container'>
 				<div className="arrow arrow-first"></div>
 				<div className="arrow arrow-second"></div>
-			</div> */}
+			</div>
 		</div>
 	)
 }

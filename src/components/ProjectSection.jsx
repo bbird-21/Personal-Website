@@ -1,11 +1,37 @@
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import TechStack from "./ProjectTechStack"
+
+gsap.registerPlugin(ScrollTrigger);
+
 export function ProjectSection({
     title,
     imagePath,
     description,
 }) {
 
+    const sectionRef = useRef(null);
+    useGSAP(() => {
+        gsap.fromTo(
+            sectionRef.current,
+            { autoAlpha: 0, opacity: 0 },
+            {
+                autoAlpha: 1,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    toggleActions: "play none none reverse",
+                    start: "top 93%",
+                },
+            }
+        );
+    }, []);
+
     return (
-        <div className="flex flex-col md:flex-row justify-center gap-10 ml-50 mr-50 md:ml-[600px] md:mr-[600px] rounded-xl">
+        <div ref={sectionRef}
+             className="opacity-0 flex flex-col md:flex-row justify-center gap-10 ml-50 mr-50 md:ml-[600px] md:mr-[500px] rounded-xl">
             <div className="bg-slate-950 p-2 flex-shrink-0">
                 <img
                     src={imagePath}
@@ -19,16 +45,19 @@ export function ProjectSection({
                         {title}
                     </h1>
                 </div>
-                <div className="project-description">
-                    <p className="text-xl text-gray-200 leading-relaxed">
-                        {description.split('\n').map((line, index) => (
-                            <span key={index}>
+                <div className="text-gray-400 leading-relaxed text-lg">
+                    {description.map((line, idx) => (
+                        <p key={idx}>
                             {line}
-                            <br />
-                            </span>
-                        ))}
-                    </p>
+                        </p>
+                    ))}
                 </div>
+                <div className="mb-4 text-lg">
+                    <p className="flex items-center text-white"><span className="text-2xl text-pink-400  mr-2">✦</span> Robust backend powered by Django.</p>
+                    <p className="flex items-center text-white"><span className="text-2xl text-pink-400  mr-2">✦</span> Security enhanced by JWT and 2FA.</p>
+                    <p className="flex items-center text-white"><span className="text-2xl text-pink-400  mr-2">✦</span> Full Dockerized Application.</p>
+                </div>
+                <TechStack></TechStack>
             </div>
         </div>
     );
