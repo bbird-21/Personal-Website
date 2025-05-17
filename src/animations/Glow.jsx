@@ -35,7 +35,7 @@ export function waveContinousGlow(className) {
     const chars = SplitText.create(className, { type: "chars" }).chars;
     const tl = gsap.timeline({
         repeat: -1,
-        repeatDelay: 0.5
+        repeatDelay: 1
     });
 
     const GLOW_COLOR_ACTIVE = "#c9c9c9";

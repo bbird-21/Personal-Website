@@ -8,8 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function ProjectSection({
     title,
-    imagePath,
+    video,
     description,
+    features
 }) {
 
     const sectionRef = useRef(null);
@@ -28,37 +29,47 @@ export function ProjectSection({
             }
         );
     }, []);
-
     return (
-        <div ref={sectionRef}
-             className="opacity-0 flex flex-col md:flex-row justify-center gap-10 ml-50 mr-50 md:ml-[600px] md:mr-[500px] rounded-xl">
-            <div className="bg-slate-950 p-2 flex-shrink-0">
-                <img
-                    src={imagePath}
-                    alt={title}
-                    className="block w-160 h-120 object-cover rounded-md aspect-video"
-                />
-            </div>
-            <div className="project-text-content flex flex-col gap-3 w-full md:w-2/3 lg:w-3/4">
-                <div className="project-title">
-                    <h1 className="text-5xl md:text-4xl font-[Poppins] text-white">
-                        {title}
-                    </h1>
-                </div>
-                <div className="text-gray-400 leading-relaxed text-lg">
-                    {description.map((line, idx) => (
-                        <p key={idx}>
-                            {line}
-                        </p>
-                    ))}
-                </div>
-                <div className="mb-4 text-lg">
-                    <p className="flex items-center text-white"><span className="text-2xl text-pink-400  mr-2">✦</span> Robust backend powered by Django.</p>
-                    <p className="flex items-center text-white"><span className="text-2xl text-pink-400  mr-2">✦</span> Security enhanced by JWT and 2FA.</p>
-                    <p className="flex items-center text-white"><span className="text-2xl text-pink-400  mr-2">✦</span> Full Dockerized Application.</p>
-                </div>
-                <TechStack></TechStack>
-            </div>
+    <div
+        ref={sectionRef}
+        className="opacity-0 flex flex-col lg:flex-row justify-center gap-10 px-4 md:px-12 lg:px-20 max-w-screen-xl mx-auto rounded-xl"
+    >
+        <div className="flex-shrink-0 w-full md:w-3/4">
+        <video
+            src={video}
+            alt={title}
+            className="w-full h-auto object-contain rounded-md aspect-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+        />
         </div>
+
+        <div className="project-text-content flex flex-col gap-3 w-full md:w-1/2">
+        <div className="project-title">
+            <h1 className="text-4xl md:text-5xl font-[Poppins] text-white">
+            {title}
+            </h1>
+        </div>
+
+        <div className="text-gray-400 leading-relaxed text-lg">
+            {description.map((line, idx) => (
+            <p key={idx}>{line}</p>
+            ))}
+        </div>
+
+        <div className="mb-4 text-lg">
+            {features.map((feature, index) => (
+            <p key={index} className="flex items-center text-white">
+                <span className="text-2xl text-pink-400 mr-2">✦</span>
+                {feature}
+            </p>
+            ))}
+        </div>
+
+        <TechStack />
+        </div>
+    </div>
     );
 }
