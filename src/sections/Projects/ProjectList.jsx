@@ -1,5 +1,8 @@
 import spacepong from "../../assets/projects/spacepong.mp4"
 import webserv from "../../assets/projects/webserv.mp4"
+import minishell from "../../assets/projects/minishell.mp4"
+
+import { transcendenceIcons, webservIcons, minishellIcons } from "../../assets/icons/icons"
 
 export const sections = [
 	{
@@ -14,6 +17,7 @@ export const sections = [
 			"Security enhanced by JWT and 2FA",
 			"Full Dockerized Application"
 		],
+		techStack: transcendenceIcons,
 		video: spacepong,
 	},
 	{
@@ -28,6 +32,22 @@ export const sections = [
 			"Supports GET, POST, and DELETE methods",
 			"Custom configuration file parser",
 		],
+		techStack: webservIcons,
 		video: webserv,
-	}
+	},
+	{
+		id: 3,
+		title: "Minishell",
+		description: [
+			"Minishell is a minimal Unix shell implemented in C.",
+			"It replicates essential shell behaviors, including command parsing, redirections, and pipelines."
+		],
+		features: [
+			"Interactive command-line interface with history and prompt",
+			"Supports built-in commands (cd, echo, pwd, export, unset, env, exit)",
+			"Handles pipes, redirections, and environment variable expansion",
+		],
+		techStack: minishellIcons,
+		video: minishell,
+	},
 ]

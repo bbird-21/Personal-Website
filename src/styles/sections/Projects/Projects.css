@@ -22,6 +22,15 @@
 .project-image {
 	display: flex;
 }
+
+.background-gradient {
+  --color-bg1: rgb(0, 0, 0);
+  --color-bg2: rgb(4, 0, 59);
+
+background:
+    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%),
+    linear-gradient(40deg, var(--color-bg1) 0%, var(--color-bg2) 100%);
+}
 /* ---------- Testing Purpose -----------
 .big-container {
 	display: flex;

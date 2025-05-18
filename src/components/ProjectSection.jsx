@@ -10,7 +10,8 @@ export function ProjectSection({
     title,
     video,
     description,
-    features
+    features,
+    techStackIcons
 }) {
 
     const sectionRef = useRef(null);
@@ -24,7 +25,8 @@ export function ProjectSection({
                 scrollTrigger: {
                     trigger: sectionRef.current,
                     toggleActions: "play none none reverse",
-                    start: "top 85%",
+                    start: "top 90%",
+                    end: 'bottom 50%+=100px',
                 },
             }
         );
@@ -34,11 +36,11 @@ export function ProjectSection({
         ref={sectionRef}
         className="opacity-0 flex flex-col items-start lg:flex-row justify-center gap-10 px-4 md:px-12 lg:px-20 max-w-screen-xl rounded-xl overflow-x-hidden"
     >
-        <div className="">
+        <div className="max-w-[35rem] lg:w-[75rem] h-full mr-10 rounded-md">
             <video
                 src={video}
                 alt={title}
-                className="w-100 lg:w-300 h-full mx-auto object-contain rounded-md aspect-video"
+                className=""
                 autoPlay
                 loop
                 muted
@@ -63,7 +65,10 @@ export function ProjectSection({
             </p>
             ))}
         </div>
-        <TechStack />
+        {}
+        <TechStack
+            techStackIcons={techStackIcons}
+        />
         </div>
     </div>
     );

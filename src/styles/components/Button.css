@@ -21,27 +21,9 @@
   color: white;
 }
 
-.contact-button::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: white;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  transition: width 0.4s ease, height 0.4s ease;
-}
-
-.contact-button:hover::before {
-  width: 300%;
-  height: 300%;
-}
-
 .contact-button:hover {
   color: black;
+  background-color: white;
 }
 .github-button {
   color: black;
