@@ -6,14 +6,6 @@
 }
 
 .title {
-  font-size: 3.5vw;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 550;
-  color: white;
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
   overflow: hidden;
 
 }
@@ -30,14 +22,6 @@
   -ms-user-select: none; /* IE10+/Edge */
 }
 
-.main-description-container {
-  display: flex;
-  margin-top: -50px;
-  justify-content: center;
-    white-space: nowrap;
-
-}
-
 .main-rotating-word-container {
   overflow: hidden;
   vertical-align: bottom;
@@ -50,7 +34,7 @@
 }
 
 .main-rotating-word {
-  text-align: left;
+  /* text-align: left; */
   visibility: hidden;
   background: linear-gradient(90deg, #87CEEB, #FFFFFF); /* Sky Blue → White */
   -webkit-background-clip: text;
@@ -65,5 +49,5 @@
   width: 100%;
   position: absolute;
   gap: 1vw;
-  margin-top: 5vw;
+  margin-top: 25vw;
 }
