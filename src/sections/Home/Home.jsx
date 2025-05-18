@@ -35,7 +35,7 @@ const Home = () => {
 				<OrbitControls enableZoom={false} />
 				</Canvas>
 			</div>
-				<div className='w-auto flex mt-80 overflow-hidden gsap-home-title'>
+				<div className='flex mt-80 overflow-hidden gsap-home-title'>
 					<div className="text-center font-[Poppins] font-semibold text-5xl sm:text-6xl md:text-7xl lg:text-7xl text-white">
 						Hey There
 					</div>
