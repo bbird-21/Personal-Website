@@ -3,7 +3,7 @@ import gsap from "gsap";
 export function outroTimeline() {
     const outroTimeline = gsap.timeline()
 
-    outroTimeline.from(".my-buttons-wrapper", {
+    outroTimeline.from(".gsap-home-buttons", {
       autoAlpha: 0,
       duration: 1,
       delay: 1,

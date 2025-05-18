@@ -9,7 +9,7 @@ gsap.registerPlugin(TextPlugin)
 
 function titleTimeline() {
 	let titleTimeline = gsap.timeline();
-	let splitTitle = SplitText.create(".title", { type: "words, lines" });
+	let splitTitle = SplitText.create(".gsap-home-title", { type: "words, lines" });
 
 	titleTimeline.from(splitTitle.lines, {
 		delay: 2.5,
@@ -27,18 +27,18 @@ function presentationTimeline() {
 	let presentationTimeline = gsap.timeline();
 
 
-	presentationTimeline.to(".main-name", {
+	presentationTimeline.to(".gsap-main-name", {
 		text: {value: "My name is Mohamed Meguedmini"},
 		duration: 2.5,
 	})
-	.to(".main-name", {
+	.to(".gsap-main-name", {
 		delay: 1,
 		duration: 1,
 		yPercent: -100,
 		opacity: 0,
 		ease: "power4"
 	})
-	.to(".main-description", {
+	.to(".gsap-main-description", {
 		text: {value: "I'm a passionate "},
 		duration: 1,
 		autoAlpha: 1
