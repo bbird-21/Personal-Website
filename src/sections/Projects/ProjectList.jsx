@@ -1,5 +1,5 @@
 import spacepong from "../../assets/projects/spacepong.mp4"
-
+import webserv from "../../assets/projects/webserv.mp4"
 
 export const sections = [
 	{
@@ -11,20 +11,23 @@ export const sections = [
 		],
 		features: [
 			"Robust backend powered by Django",
-			"Security enhanced by JWT and 2FA.",
-			"Full Dockerized Application."
+			"Security enhanced by JWT and 2FA",
+			"Full Dockerized Application"
 		],
 		video: spacepong,
 	},
-	// {
-	// 	id: 2,
-	// 	title: "MiniShell",
-	// 	description: [
-	// 		"Using the latest technologies and frameworks, our development team builds robust, scalable applications. We prioritize performance, security, and maintainability in every line of code.",
-	// 	],
-	// 	features: [
-
-	// 	]
-	// 	image: "/placeholder.svg?height=400&width=600",
-	// }
+	{
+		id: 2,
+		title: "Webserv",
+		description: [
+			"Webserv is a lightweight HTTP server developed in C++.",
+			"It replicates core functionalities of Nginx, handling HTTP requests, CGI execution, and configuration parsing."
+		],
+		features: [
+			"Built from scratch in C++ following RFC 7230",
+			"Supports GET, POST, and DELETE methods",
+			"Custom configuration file parser",
+		],
+		video: webserv,
+	}
 ]

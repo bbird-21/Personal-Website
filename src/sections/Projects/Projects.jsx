@@ -29,7 +29,7 @@ const Projects = () => {
 	});
 	return (
 		<>
-			<div className="flex flex-col justify-center items-center flex-wrap bg-black ">
+			<div className="flex flex-col justify-center items-center flex-wrap bg-black">
 				<div className="mt-42 text-center">
 					<h2 className="text-5xl md:text-6xl font-[Poppins] bg-gradient-to-r from-[#87CEEB] to-white bg-clip-text text-transparent"> Experiences</h2>
 					<h3 className="gsap-title text-2xl md:text-3xl text-white mt-3 invisible"> Let's deep in dive in my projects </h3>
@@ -40,9 +40,8 @@ const Projects = () => {
 						key={index}
 						title={section.title}
 						description={section.description}
-						features={section.features}
 						video={section.video}
-						imageOnRight={true}
+						features={section.features}
 					/>
 				))}
 				</div>
