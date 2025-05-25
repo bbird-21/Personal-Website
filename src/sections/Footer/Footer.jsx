@@ -7,12 +7,12 @@ import githubIcon from "../../assets/icons/github.png"
 import linkedinIcon from "../../assets/icons/linkedin.png"
 const Footer = () => {
 	return (
-		<footer className="flex flex-col md:flex-col gap-10 pt-40 pb-10 bg-black font-[Poppins] bg-pink-900">
+		<footer className="flex flex-col md:flex-col pt-40 pb-10 bg-black font-[Poppins] bg-pink-900">
 			{ /* Top Divider */ }
 			<div className="flex justify-center">
-				<div className="w-1/2 bg-neutral-700 h-0.5"></div>
+				<div className="w-3/4 md:w-3/5 bg-neutral-700 h-0.5"></div>
 			</div>
-			<div className="flex flex-wrap gap-15 xl:gap-60 my-20 mx-20 md:mx-auto">
+			<div className="flex flex-wrap gap-15 xl:gap-60 my-15 mx-20 md:mx-auto">
 				<FooterSection title="bbird.dev">
 					<div className="text-neutral-300 text-sl">
 						I'm Mohamed Meguedmini — a tech <br />
@@ -58,7 +58,7 @@ const Footer = () => {
 			</div>
 			{/* Bottom divider */}
 			<div className="flex justify-center">
-				<div className="w-1/2 bg-neutral-700 h-0.5"></div>
+				<div className="w-3/4 md:w-3/5 bg-neutral-700 h-0.5"></div>
 			</div>
 		</footer>
 	);
