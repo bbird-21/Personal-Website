@@ -24,29 +24,26 @@ const Home = () => {
 		var master = gsap.timeline();
 
 		master.add(introTimeline());
-		// master.add(outroTimeline());
+		master.add(outroTimeline());
 	});
 
 	const usePointerEvents = () => {
-	const [pointerEvents, setPointerEvents] = useState('none');
+		const [pointerEvents, setPointerEvents] = useState('none');
+		useEffect(() => {
+			const handleResize = () => {
+				setPointerEvents(window.innerWidth >= 768 ? 'auto' : 'none');
+			};
+			handleResize();
+			window.addEventListener('resize', handleResize);
 
-	useEffect(() => {
-		const handleResize = () => {
-		setPointerEvents(window.innerWidth >= 768 ? 'auto' : 'none');
-		};
+			return () => window.removeEventListener('resize', handleResize);
+		}, []);
 
-		handleResize();
-
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
-
-  return pointerEvents;
-};
+		return pointerEvents;
+	};
 
 	const pointerEvents = usePointerEvents();
 
-	console.log({pointerEvents})
 	return (
 		<div className="flex flex-col items-center relative h-dvh bg-blue-gradient">
 			<div className="particles-background">
