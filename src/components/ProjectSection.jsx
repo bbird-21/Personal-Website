@@ -32,7 +32,7 @@ export function ProjectSection({
         );
     }, []);
     return (
-    <div
+    <section
         ref={sectionRef}
         className="opacity-0 flex flex-col items-start lg:flex-row justify-center gap-10 px-4 md:px-12 lg:px-20 max-w-screen-xl rounded-xl overflow-x-hidden"
     >
@@ -70,6 +70,6 @@ export function ProjectSection({
             techStackIcons={techStackIcons}
         />
         </div>
-    </div>
+    </section>
     );
 }

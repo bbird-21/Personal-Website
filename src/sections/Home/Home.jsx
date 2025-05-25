@@ -27,7 +27,7 @@ const Home = () => {
 	});
 
 	return (
-		<div className="flex flex-col items-center relative h-screen bg-blue-gradient">
+		<div className="flex flex-col items-center relative h-dvh bg-blue-gradient">
 			<div className="particles-background">
 				<Canvas camera={{ position: [2.0, 2.0, 2.0] }}>
 				<ambientLight intensity={0.5} />
