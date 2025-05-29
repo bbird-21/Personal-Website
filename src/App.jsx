@@ -5,8 +5,10 @@ import Projects from './sections/Projects/Projects';
 import Home from './sections/Home/Home';
 import Footer from "./sections/Footer/Footer";
 import LoadingScreen from './components/LoadingScreen'; // Import your LoadingScreen component
+import { inject } from '@vercel/analytics';
 
 const App = () => {
+  inject();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -36,6 +38,7 @@ const App = () => {
 
   return (
     <>
+      <Analytics />
       <FixedHeader />
       <Home />
       <Projects />
