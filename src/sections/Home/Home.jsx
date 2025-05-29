@@ -55,7 +55,7 @@ const Home = () => {
 			<div className="particles-background">
 				<Canvas style={{ pointerEvents: pointerEvents }} camera={{ position: [2.0, 2.0, 2.0] }}>
 				<ambientLight intensity={0.5} />
-				<GeometryParticles count={1200} />
+				<GeometryParticles count={800} />
 				<OrbitControls enableZoom={false} enableRotate={true}/>
 				</Canvas>
 			</div>
