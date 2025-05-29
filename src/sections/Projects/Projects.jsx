@@ -29,10 +29,10 @@ const Projects = () => {
 	});
 	return (
 		<>
-			<div className="flex flex-col justify-center items-center flex-wrap background-gradient">
+			<div className="flex flex-col flex-wrap pb-30 justify-center items-center  background-gradient">
 				<div className="mt-42 text-center">
 					<h2 className="text-5xl md:text-6xl font-[Poppins] bg-gradient-to-r from-[#87CEEB] to-white bg-clip-text text-transparent"> Experiences</h2>
-					<h3 className="gsap-title text-2xl md:text-3xl text-white mt-3 invisible"> Let's deep in dive in my projects </h3>
+					<h3 className="gsap-title text-2xl md:text-3xl text-white mt-3 invisible"> Let's deep dive in my projects </h3>
 				</div>
 				<div className="flex flex-col gap-40 mt-50">
 				{sections.map((section, index) => (

@@ -2,16 +2,17 @@
 
 .github-button,
 .contact-button {
-  width: 210px;
   border: 2px solid white;
-  font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  font-weight: 450;
+  font-weight: 420;
   border-radius: 55px;
-  padding: 0.3vw;
   transition: 0.2s;
   cursor: pointer;
   z-index: 0;
+  width: 9rem;
+  padding: 5px 0px;
+  font-size: 1.2rem;
+
 }
 
 .contact-button {
@@ -35,12 +36,6 @@
 
 .github-button:hover {
   opacity: 0.8;
-}
-
-.github-logo {
-  width: 10px;
-  margin-right: 10px;
-  pointer-events: stroke;
 }
 
 .icon-tech-stack {
@@ -105,26 +100,16 @@
 @media (max-width: 1024px) {
   .github-button,
   .contact-button {
-    width: 180px;
-    font-size: 18px;
-    padding: 0.5vw;
+    width: 8rem;
+    font-size: 1rem;
+    padding: 3px 0px;
   }
 }
 
 @media (max-width: 768px) {
   .github-button,
   .contact-button {
-    font-size: 14px;
-    padding: 6px 12px;
-    width: 150px;
-  }
-}
-
-@media (max-width: 480px) {
-  .github-button,
-  .contact-button {
-    font-size: 13px;
-    padding: 5px 10px;
-    width: 120px;
+    width: 6.5rem;
+    font-size: 0.8rem;
   }
 }
