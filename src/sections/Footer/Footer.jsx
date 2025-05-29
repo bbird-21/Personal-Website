@@ -7,7 +7,7 @@ import githubIcon from "../../assets/icons/github.png"
 import linkedinIcon from "../../assets/icons/linkedin.png"
 const Footer = () => {
 	return (
-		<footer className="flex flex-col md:flex-col pt-40 pb-10 bg-black font-[Poppins] bg-pink-900">
+		<footer className="flex flex-col md:flex-col pt-30 pb-10 bg-black font-[Poppins] bg-pink-900">
 			{ /* Top Divider */ }
 			<div className="flex justify-center">
 				<div className="w-3/4 md:w-3/5 bg-neutral-700 h-0.5"></div>
